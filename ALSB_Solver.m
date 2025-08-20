@@ -1,0 +1,41 @@
+function [OutImg,Dict] = ALSB_Solver(InImg,Thr)
+
+params = [];
+
+if ~isfield(params,'x')
+    params.x = InImg; 
+end
+
+if ~isfield(params,'blocksize')
+    params.blocksize = 8; 
+end
+
+if ~isfield(params,'dictsize')
+    params.dictsize = 256; 
+end
+
+if ~isfield(params,'sigma')
+    params.sigma = Thr; 
+end
+
+if ~isfield(params,'maxval')
+    params.maxval = 255; 
+end
+
+if ~isfield(params,'trainnum')
+    params.trainnum = 20000;
+end
+
+if ~isfield(params,'iternum')
+    params.iternum = 45;
+end
+
+if ~isfield(params,'memusage')
+    params.memusage = 'high'; 
+end
+
+[ImgNew,D] = KSVD_Module(params);
+Dict = D;
+OutImg = ImgNew;
+ 
+end
