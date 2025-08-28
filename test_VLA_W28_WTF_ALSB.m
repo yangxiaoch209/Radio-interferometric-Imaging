@@ -355,7 +355,7 @@ iter = 1;
 imgMasked = Dirtymap; 
 ALSB_Thr = 0.02;
 mu = 0.002;
-Step_length = 0.7;
+Step_length = 0.6;
 Inloop = 20;
 InitImg=imgMasked;
 
