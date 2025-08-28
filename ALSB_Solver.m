@@ -19,7 +19,7 @@ if ~isfield(params,'sigma')
 end
 
 if ~isfield(params,'maxval')
-    params.maxval = 255; 
+    params.maxval = 0.0003; 
 end
 
 if ~isfield(params,'trainnum')
